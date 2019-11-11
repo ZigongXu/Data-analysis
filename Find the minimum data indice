@@ -1,0 +1,4 @@
+      # argmim    
+    temp=np.argmin(abs((Smooth_L1.index - pd.Timestamp(A1H[i,0],tz='UTC'))/np.timedelta64(1, 's')))
+    print(Smooth_L1.index[temp])
+    
