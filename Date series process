@@ -1,0 +1,5 @@
+1. Pick a slice in Panda time index
+
+   a.index  #pandas.core.indexes.datetimes.DatetimeIndex
+  np.where(np.logical_and(a.index>'20190506',a.index<'20190508'))
+  # but remember, the value return is a multidimension array
