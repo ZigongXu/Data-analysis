@@ -11,3 +11,9 @@ int(data[i,5])),'%Y-%m-%dT%H:%M') for i in range(len(data))])
 
  time_range = np.logical_or(np.logical_and(time>dt.datetime(2019,1,2),time<dt.datetime(2019,1,12,12)), \
  np.logical_and(time>dt.datetime(2019,1,30,17),time<dt.datetime(2019,2,10,8)))
+ 
+3. <change the shape of array>
+   Flatten
+   reshape
+    Numpy Arrays: Concatenating, Flattening and Adding Dimensions
+    https://www.python-course.eu/numpy_changing_dimensions.php
