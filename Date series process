@@ -17,3 +17,7 @@ int(data[i,5])),'%Y-%m-%dT%H:%M') for i in range(len(data))])
    reshape
     Numpy Arrays: Concatenating, Flattening and Adding Dimensions
     https://www.python-course.eu/numpy_changing_dimensions.php
+4. Combined two array 
+  https://cmdlinetips.com/2018/04/how-to-concatenate-arrays-in-numpy/
+   
+   
