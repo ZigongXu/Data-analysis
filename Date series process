@@ -28,4 +28,11 @@ int(data[i,5])),'%Y-%m-%dT%H:%M') for i in range(len(data))])
    # add this before plot.
    from pandas.tseries import converter
    converter.register()
+6. convert string to datetime: inclding one function convert pandas to datetime
 
+ #https://chrisalbon.com/python/basics/strings_to_datetime/
+  from dateutil.parser import parse: directly parse date string
+  pd.to_datetime(df['date'])
+
+7. calculate the delta time:
+     time = np.append(time, (parse(meta['DATE-OBS'])-time_0)/datetime.timedelta(seconds=1))
