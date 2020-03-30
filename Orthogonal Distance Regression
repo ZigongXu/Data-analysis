@@ -26,3 +26,12 @@ Introduction: Todo \
    1/2*[log10(E2)-log10(E1)]. But I would suggest it equal to 2sigma or 3sigma.
      If the equivilant E is E= (E1+E2)/2, then the sigma should be 1/2*(E2-E1).
       
+      
+ 
+3. How to evaluate the goodness of fitting in odr;
+    https://www.physics.utoronto.ca/~phy326/python/odr_fit_to_data.py
+    give some comment. Shortly, just use the output parameter :residual variance is the condition
+     
+    Here is the link of how to estimate the fitting goodness.
+    http://www.math.utah.edu/~palais/pcr/spike/Evaluating%20the%20Goodness%20of%20Fit%20--%20Fitting%20Data%20(Curve%20Fitting%20Toolbox)%20copy.html
+    also, wiki.
