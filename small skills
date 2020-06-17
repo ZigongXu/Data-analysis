@@ -1,0 +1,24 @@
+1. 
+
+Use np.where to get the indices where a given condition is True.
+
+Examples:
+
+For a 2D np.ndarray called a:
+
+i, j = np.where(a == value) # when comparing arrays of integers
+
+i, j = np.where(np.isclose(a, value)) # when comparing floating-point arrays
+
+For a 1D array:
+
+i, = np.where(a == value) # integers
+
+i, = np.where(np.isclose(a, value)) # floating-point
+
+2. 
+tmp = [1,2,3,4,5] #python list
+a = numpy.array(tmp) #numpy array
+i = list(a).index(2) # i will return index of 2, which is 1
+
+
