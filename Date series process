@@ -36,3 +36,22 @@ int(data[i,5])),'%Y-%m-%dT%H:%M') for i in range(len(data))])
 
 7. calculate the delta time:
      time = np.append(time, (parse(meta['DATE-OBS'])-time_0)/datetime.timedelta(seconds=1))
+
+8. Timezone aware and unware issu of datetime 
+   ---Method 1.
+   from datetime import datetime
+   from datetime import timezone
+
+   dt = datetime.now()
+   dt.replace(tzinfo=timezone.utc)
+   ----Method 2.
+   import datetime
+   import pytz
+
+   unaware = datetime.datetime(2011, 8, 15, 8, 15, 12, 0)
+   aware = datetime.datetime(2011, 8, 15, 8, 15, 12, 0, pytz.UTC)  # this is a way method 3.
+
+   now_aware = pytz.utc.localize(unaware) # method 2
+   assert aware == now_aware
+   print(dt.replace(tzinfo=timezone.utc).isoformat())
+   '2017-01-12T22:11:31+00:00'
