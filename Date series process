@@ -55,3 +55,9 @@ int(data[i,5])),'%Y-%m-%dT%H:%M') for i in range(len(data))])
    assert aware == now_aware
    print(dt.replace(tzinfo=timezone.utc).isoformat())
    '2017-01-12T22:11:31+00:00'
+   -----Case 3: pandas read and localized it
+   location = pd.read_csv(file, sep = ' ', skiprows=1, index_col=0, header = None,parse_dates=True)
+   import pytz
+   location = location.rename_axis( 'Time')
+   location.index = location.index.tz_localize(pytz.UTC)
+   
