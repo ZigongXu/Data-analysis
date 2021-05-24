@@ -1,0 +1,14 @@
+Data fitting basic:( mainly code and small tricks when apply. No need to google next time, lots of collection from Google results.
+
+
+1. Most simple fitting
+Using scipy.stats or np
+here is example code:
+from scipy import stats
+
+m,b=np.polyfit(X, Y,1)
+print(stats.linregress(X, Y))
+# both above methods are ok.
+plt.plot(xx, m*xx+b, ls='--')
+
+2. ODR with error in both direction. see another file in this folder. Here give the code for application.
