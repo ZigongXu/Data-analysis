@@ -6,9 +6,19 @@ Using scipy.stats or np
 here is example code:
 from scipy import stats
 
-m,b=np.polyfit(X, Y,1)
-print(stats.linregress(X, Y))
+#way1
+coef = np.polyfit(x,y,1)
+poly1d_fn = np.poly1d(coef)
+fitted_yy = poly1d_fn(x)
 # both above methods are ok.
+#way2
+m,b=np.polyfit(X, Y,1)
 plt.plot(xx, m*xx+b, ls='--')
+#way 3
+gradient, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+mn=np.min(x)
+mx=np.max(x)
+x1=np.linspace(mn,mx,500)
+y1=gradient*x1+intercept
 
 2. ODR with error in both direction. see another file in this folder. Here give the code for application.
